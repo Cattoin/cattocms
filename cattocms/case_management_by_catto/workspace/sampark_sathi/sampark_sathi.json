@@ -1,0 +1,64 @@
+{
+ "charts": [
+  {
+   "chart_name": "Cases Graph",
+   "label": "Cases Graph"
+  },
+  {
+   "chart_name": "Catego",
+   "label": "Case Categories"
+  },
+  {
+   "chart_name": "Pending Cases",
+   "label": "Pending Cases"
+  }
+ ],
+ "content": "[{\"id\":\"b3bty88Us3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sampark Sathi</span>\",\"col\":12}},{\"id\":\"igmU5BNA1Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Case Count\",\"col\":4}},{\"id\":\"B1wx7aAVgk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Tasks\",\"col\":3}},{\"id\":\"aZfcEgArLQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"id\":\"FXp-9JjWc8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases Graph\",\"col\":6}},{\"id\":\"c-ArR1--_c\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Pending Cases\",\"col\":6}},{\"id\":\"qQG9ISmpBF\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"xYNIzJZs-R\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Categories\",\"col\":6}}]",
+ "creation": "2024-06-01 10:03:13.771778",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Sampark Sathi",
+ "links": [],
+ "modified": "2024-06-18 16:03:22.797981",
+ "modified_by": "Administrator",
+ "module": "Case Management by Catto",
+ "name": "Sampark Sathi",
+ "number_cards": [
+  {
+   "label": "Case Count",
+   "number_card_name": "Case Count"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Case List",
+   "link_to": "Case",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "My Tasks",
+   "link_to": "ToDo",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Sampark Sathi"
+}

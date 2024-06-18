@@ -1,0 +1,85 @@
+{% extends "cattocms/templates/sampark_base.html" %}
+
+{% block content %}
+
+<style>
+  .tile {
+      margin-bottom: 10px;
+  }
+  .tile img {
+      width: 100%;
+      height: 300px;
+      padding: 20px;
+      object-fit: cover;
+  }
+  .tile-body {
+      padding: 20px;
+      text-align: center;
+  }
+  .tile-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+  }
+</style>
+
+<section id="main-container" class="main-container">
+  <div class="container">
+    <h2 class="text-center">Fund a Beneficiary</h2>
+    <div class="row">
+      <div class="col-12">
+        <div class="shuffle-btn-group">
+          <label class="active" for="all">
+            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
+          </label>
+          <label for="commercial">
+            <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Health
+          </label>
+          <label for="education">
+            <input type="radio" name="shuffle-filter" id="education" value="education">Education
+          </label>
+          <label for="government">
+            <input type="radio" name="shuffle-filter" id="government" value="government">Skilling
+          </label>
+          <label for="infrastructure">
+            <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure">Human Rights
+          </label>
+          <label for="residential">
+            <input type="radio" name="shuffle-filter" id="residential" value="residential">Animal Care
+          </label>
+        </div><!-- project filter end -->
+
+        <div class="row shuffle-wrapper">
+          <div class="col-1 shuffle-sizer"></div>
+
+        {{ CaseCard(caselist) }}
+
+        </div><!-- shuffle end -->
+      </div>
+
+    </div><!-- Content row end -->
+
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
+{% endblock %}
+
+{% macro CaseCard(caselist) %}
+{% if caselist | length %}
+	{% for case in caselist %}
+  
+    <div class="col-lg-4 col-md-6 shuffle-item tile" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
+        <div class="card">
+            <img src="{{ case.case_image }}" class="card-img-top" alt="Beneficiary 1">
+            <div class="tile-body">
+                <h5 class="tile-title">{{ case.main_title }}</h5>
+                <a href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</a>
+            </div>
+        </div>
+    </div>
+	{% endfor %}
+{% else %}
+	<p class="text-muted mt-3">
+		No cases right now!
+	</p>
+{% endif %}
+{% endmacro %}

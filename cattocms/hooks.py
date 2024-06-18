@@ -4,6 +4,16 @@ app_publisher = "Catto.in"
 app_description = "A simplified case management system"
 app_email = "sai@catto.in"
 app_license = "gpl-3.0"
+#base_template = "cattocms/templates/sampark_base.html"
+
+
+website_route_rules = [
+    {
+		"from_route": "/fund/<caseid>",
+		"to_route": "/singlecase",
+	}
+]
+
 # required_apps = []
 
 # Includes in <head>

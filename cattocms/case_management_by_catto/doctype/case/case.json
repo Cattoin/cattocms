@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CASE-{#####}",
+ "creation": "2024-06-01 10:05:05.590248",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "case_details_section",
+  "beneficiary_name",
+  "age",
+  "gender",
+  "beneficiary_contact",
+  "category",
+  "status",
+  "case_updates",
+  "case_expenses",
+  "case_files",
+  "tab_2_tab",
+  "source_of_case",
+  "geo_location_of_the_beneficiary",
+  "fund_a_benef_tab",
+  "enable_funding",
+  "main_title",
+  "sathi_name",
+  "case_image",
+  "target_amount",
+  "cause_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "case_details_section",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "beneficiary_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Beneficiary Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "beneficiary_contact",
+   "fieldtype": "Data",
+   "label": "Beneficiary Contact"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Health\nEducation\nHuman Rights\nSkill and Vocational training\nLivelihood and Employment\nWomen's Rights\nChild Rights\nElderly Rights\nDisability Rights\nElderly Care\nShelter Home\nMental Health\nHuman Trafficking\nAnimal Care\nHealth camp\nSelf Help Group\nOthers"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "New\nVerified\nPending\nClosed"
+  },
+  {
+   "fieldname": "case_updates",
+   "fieldtype": "Table",
+   "label": "Case Updates",
+   "options": "Case Update"
+  },
+  {
+   "fieldname": "case_expenses",
+   "fieldtype": "Table",
+   "label": "Case Expenses",
+   "options": "Case Expense"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Information"
+  },
+  {
+   "fieldname": "source_of_case",
+   "fieldtype": "Select",
+   "label": "Source of Case",
+   "options": "Website\nVolunteer\nPhone\nEmail"
+  },
+  {
+   "fieldname": "geo_location_of_the_beneficiary",
+   "fieldtype": "Geolocation",
+   "label": "Geo Location of the beneficiary"
+  },
+  {
+   "fieldname": "sathi_name",
+   "fieldtype": "Link",
+   "label": "Sathi",
+   "options": "User"
+  },
+  {
+   "description": "In rupees",
+   "fieldname": "target_amount",
+   "fieldtype": "Int",
+   "label": "Target Amount"
+  },
+  {
+   "fieldname": "cause_details",
+   "fieldtype": "Small Text",
+   "label": "Cause Details"
+  },
+  {
+   "fieldname": "case_files",
+   "fieldtype": "Table",
+   "label": "Case Files",
+   "options": "Case File"
+  },
+  {
+   "fieldname": "fund_a_benef_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fund a Beneficiary"
+  },
+  {
+   "fieldname": "main_title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_funding",
+   "fieldtype": "Check",
+   "label": "Enable Funding on Website"
+  },
+  {
+   "fieldname": "case_image",
+   "fieldtype": "Attach Image",
+   "label": "Image for the cause"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-18 16:54:10.344004",
+ "modified_by": "Administrator",
+ "module": "Case Management by Catto",
+ "name": "Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
