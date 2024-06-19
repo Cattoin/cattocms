@@ -1,0 +1,9 @@
+{% extends "cattocms/templates/sampark_base.html" %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <h2 style="text-align: center;">{{ case_details.main_title }}</h2>
+    <iframe src="http://samp.test:8000/confirm-details/new?case_id={{ case_details.name }}&donated_amount={{case_details.target_amount}}" style="border: none; width: 100%; height: 700px;"></iframe>
+</div>
+{% endblock %}

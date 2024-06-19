@@ -8,16 +8,24 @@
  "field_order": [
   "case_details_section",
   "beneficiary_name",
+  "beneficiary_contact",
+  "column_break_ylkd",
+  "reference_name",
+  "reference_contact",
+  "section_break_v4ka",
   "age",
   "gender",
-  "beneficiary_contact",
   "category",
   "status",
+  "column_break_nxto",
+  "case_description",
+  "section_break_nmad",
   "case_updates",
   "case_expenses",
   "case_files",
   "tab_2_tab",
   "source_of_case",
+  "benef_address",
   "geo_location_of_the_beneficiary",
   "fund_a_benef_tab",
   "enable_funding",
@@ -25,13 +33,14 @@
   "sathi_name",
   "case_image",
   "target_amount",
-  "cause_details"
+  "case_details",
+  "sathi_details"
  ],
  "fields": [
   {
    "fieldname": "case_details_section",
    "fieldtype": "Section Break",
-   "label": "Case Details"
+   "label": "Basic Details"
   },
   {
    "fieldname": "beneficiary_name",
@@ -100,20 +109,14 @@
   },
   {
    "fieldname": "sathi_name",
-   "fieldtype": "Link",
-   "label": "Sathi",
-   "options": "User"
+   "fieldtype": "Data",
+   "label": "Sathi"
   },
   {
    "description": "In rupees",
    "fieldname": "target_amount",
    "fieldtype": "Int",
    "label": "Target Amount"
-  },
-  {
-   "fieldname": "cause_details",
-   "fieldtype": "Small Text",
-   "label": "Cause Details"
   },
   {
    "fieldname": "case_files",
@@ -141,11 +144,58 @@
    "fieldname": "case_image",
    "fieldtype": "Attach Image",
    "label": "Image for the cause"
+  },
+  {
+   "fieldname": "case_description",
+   "fieldtype": "Small Text",
+   "label": "Case Description"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "Reference Name"
+  },
+  {
+   "fieldname": "reference_contact",
+   "fieldtype": "Data",
+   "label": "Reference Contact"
+  },
+  {
+   "fieldname": "column_break_ylkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_v4ka",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "column_break_nxto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nmad",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "benef_address",
+   "fieldtype": "Data",
+   "label": "Address of Beneficiary"
+  },
+  {
+   "fieldname": "case_details",
+   "fieldtype": "Small Text",
+   "label": "Beneficiary Details"
+  },
+  {
+   "fieldname": "sathi_details",
+   "fieldtype": "Small Text",
+   "label": "Sathi Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 16:54:10.344004",
+ "modified": "2024-06-19 10:46:10.922861",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Case",

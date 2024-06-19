@@ -2,115 +2,14 @@
 
 {% block content %}
 <div class="container">
-    <br>
-    <br>
-    <h2 class="text-center"> Raise a Concern </h2>
-    <br>
-<form> 
-  <div class="form-group row">
-    <label for="text" class="col-4 col-form-label">Reference Person Name</label> 
-    <div class="col-8">
-      <input id="text" name="text" type="text" class="form-control">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text1" class="col-4 col-form-label">Beneficiary Name</label> 
-    <div class="col-8">
-      <input id="text1" name="text1" type="text" class="form-control">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text5" class="col-4 col-form-label">Age</label> 
-    <div class="col-8">
-      <input id="text5" name="text5" type="text" class="form-control">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-4">Gender</label> 
-    <div class="col-8">
-      <div class="custom-control custom-radio custom-control-inline">
-        <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="rabbit"> 
-        <label for="radio_0" class="custom-control-label">Male</label>
-      </div>
-      <div class="custom-control custom-radio custom-control-inline">
-        <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="duck"> 
-        <label for="radio_1" class="custom-control-label">Female</label>
-      </div>
-      <div class="custom-control custom-radio custom-control-inline">
-        <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="fish"> 
-        <label for="radio_2" class="custom-control-label">Other</label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="select" class="col-4 col-form-label">Concern Categoory</label> 
-    <div class="col-8">
-      <select id="select" name="select" class="custom-select">
-        <option value="Health">Health</option>
-        <option value="Education">Education</option>
-        <option value="HumanRights">Human Rights</option>
-        <option value="">Skill and Vocational training</option>
-        <option value="">Livelihood and Employment</option>
-        <option value="">Women's Rights</option>
-        <option value="">Child Rights</option>
-        <option value="">Elderly Rights</option>
-        <option value="">Disability Rights</option>
-        <option value="">Elderly Care</option>
-        <option value="">Others</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-4">Documents</label> 
-    <div class="col-8">
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="checkbox" id="checkbox_0" type="checkbox" checked="checked" aria-describedby="checkboxHelpBlock" class="custom-control-input" value="rabbit"> 
-        <label for="checkbox_0" class="custom-control-label">Aadhar</label>
-      </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="checkbox" id="checkbox_1" type="checkbox" aria-describedby="checkboxHelpBlock" class="custom-control-input" value="duck"> 
-        <label for="checkbox_1" class="custom-control-label">Ration</label>
-      </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="checkbox" id="checkbox_2" type="checkbox" aria-describedby="checkboxHelpBlock" class="custom-control-input" value="fish"> 
-        <label for="checkbox_2" class="custom-control-label">Voter ID</label>
-      </div> 
-      <span id="checkboxHelpBlock" class="form-text text-muted">Select which are available</span>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text2" class="col-4 col-form-label">Text Field</label> 
-    <div class="col-8">
-      <input id="text2" name="text2" type="text" class="form-control">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="textarea" class="col-4 col-form-label">Details</label> 
-    <div class="col-8">
-      <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control" aria-describedby="textareaHelpBlock"></textarea> 
-      <span id="textareaHelpBlock" class="form-text text-muted">Requirements,</span>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text3" class="col-4 col-form-label">Benefeciary Contact</label> 
-    <div class="col-8">
-      <input id="text3" name="text3" type="text" class="form-control">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text4" class="col-4 col-form-label">Location</label> 
-    <div class="col-8">
-      <input id="text4" name="text4" type="text" class="form-control" aria-describedby="text4HelpBlock"> 
-      <span id="text4HelpBlock" class="form-text text-muted">Address</span>
-    </div>
-  </div> 
-  <div class="form-group row">
-    <div class="offset-4 col-8">
-      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
-</div>
 <br>
+<h2 style="text-align: center;">Raise a Concern</h2>
+  <div class="concernform">
+    <p style="text-align: center;">Ever felt helpless when someone needed support? <br> Now you can make a difference! Share the details, and we'll connect them with the right resources.</p>
+
+    <iframe src="http://samp.test:8000/raise-a-concern" style="border: none; width: 100%; height: 740px;"></iframe>
+  </div>
+<br>
+</div>
 
 {% endblock %}

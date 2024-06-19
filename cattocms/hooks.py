@@ -11,6 +11,10 @@ website_route_rules = [
     {
 		"from_route": "/fund/<caseid>",
 		"to_route": "/singlecase",
+	},
+	{
+		"from_route": "/fabpay/<caseid>",
+		"to_route": "/fabpay",
 	}
 ]
 

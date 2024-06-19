@@ -1,19 +1,15 @@
 {
  "charts": [
   {
-   "chart_name": "Cases Graph",
-   "label": "Cases Graph"
+   "chart_name": "Case Graph",
+   "label": "Case Graph"
   },
   {
-   "chart_name": "Catego",
-   "label": "Case Categories"
-  },
-  {
-   "chart_name": "Pending Cases",
-   "label": "Pending Cases"
+   "chart_name": "Case Category",
+   "label": "Case Category"
   }
  ],
- "content": "[{\"id\":\"b3bty88Us3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sampark Sathi</span>\",\"col\":12}},{\"id\":\"igmU5BNA1Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Case Count\",\"col\":4}},{\"id\":\"B1wx7aAVgk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Tasks\",\"col\":3}},{\"id\":\"aZfcEgArLQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"id\":\"FXp-9JjWc8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases Graph\",\"col\":6}},{\"id\":\"c-ArR1--_c\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Pending Cases\",\"col\":6}},{\"id\":\"qQG9ISmpBF\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"xYNIzJZs-R\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Categories\",\"col\":6}}]",
+ "content": "[{\"id\":\"b3bty88Us3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sampark Sathi</span>\",\"col\":12}},{\"id\":\"igmU5BNA1Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Case Count\",\"col\":4}},{\"id\":\"aZfcEgArLQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"id\":\"B1wx7aAVgk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Tasks\",\"col\":3}},{\"id\":\"9Xe_59GPOC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Graph\",\"col\":6}},{\"id\":\"ugpM6iDbXd\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Category\",\"col\":6}}]",
  "creation": "2024-06-01 10:03:13.771778",
  "custom_blocks": [],
  "docstatus": 0,
@@ -26,14 +22,14 @@
  "is_hidden": 0,
  "label": "Sampark Sathi",
  "links": [],
- "modified": "2024-06-18 16:03:22.797981",
+ "modified": "2024-06-19 15:17:33.209766",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Sampark Sathi",
  "number_cards": [
   {
    "label": "Case Count",
-   "number_card_name": "Case Count"
+   "number_card_name": "Case count"
   }
  ],
  "owner": "Administrator",

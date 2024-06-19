@@ -5,6 +5,7 @@
 <style>
   .tile {
       margin-bottom: 10px;
+      padding: 5px;
   }
   .tile img {
       width: 100%;
@@ -19,6 +20,21 @@
   .tile-title {
       font-size: 1.25rem;
       margin-bottom: 10px;
+  }
+  .verified-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 128, 0, 0.7); /* Semi-transparent green background */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .verified-badge i {
+    margin-right: 5px;
   }
 </style>
 
@@ -70,8 +86,12 @@
     <div class="col-lg-4 col-md-6 shuffle-item tile" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
         <div class="card">
             <img src="{{ case.case_image }}" class="card-img-top" alt="Beneficiary 1">
+            <div class="verified-badge">
+              <i class="fas fa-check-circle"></i> Verified
+            </div>
             <div class="tile-body">
                 <h5 class="tile-title">{{ case.main_title }}</h5>
+                <h5><strong>₹{{ case.target_amount }}</strong></h5>
                 <a href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</a>
             </div>
         </div>

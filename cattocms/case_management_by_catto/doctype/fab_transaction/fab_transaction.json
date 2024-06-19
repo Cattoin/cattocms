@@ -6,19 +6,13 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "case",
+  "case_id",
   "donated_amount",
   "donor_name",
   "donor_email",
   "donor_phone"
  ],
  "fields": [
-  {
-   "fieldname": "case",
-   "fieldtype": "Link",
-   "label": "Case",
-   "options": "Case"
-  },
   {
    "fieldname": "donated_amount",
    "fieldtype": "Currency",
@@ -39,11 +33,17 @@
    "fieldname": "donor_name",
    "fieldtype": "Data",
    "label": "Donor Name"
+  },
+  {
+   "fieldname": "case_id",
+   "fieldtype": "Link",
+   "label": "Case",
+   "options": "Case"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 20:08:13.191621",
+ "modified": "2024-06-19 01:05:17.437663",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "FAB Transaction",

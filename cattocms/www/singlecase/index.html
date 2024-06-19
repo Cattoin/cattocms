@@ -1,5 +1,153 @@
 {% extends "cattocms/templates/sampark_base.html" %}
 
 {% block content %}
-{{ case_details.name }}
+<head>
+    <style>
+        .image-container {
+          width: 60%;
+        }
+        .details-container {
+          width: 40%;
+        }
+        @media (max-width: 768px) {
+          .image-container, .details-container {
+            width: 100%;
+          }
+        }
+        .share-dropdown {
+            display: inline-block;
+        }
+        .share-dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .share-dropdown:hover .share-dropdown-menu {
+            display: block;
+        }
+        .share-dropdown-menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+      </style>
+</head>
+<div class="container">
+    <div class="container mt-5">
+        <div class="row">
+            <h2>{{ case_details.main_title }}</h2>
+            <div class="image-container">
+            <img src="{{ case_details.case_image }}" class="img-fluid" alt="Beneficiary Image">
+          </div>
+            <div class="details-container pl-3">
+                <h4>Beneficiary Name:</h4>
+                <p><strong>{{ case_details.beneficiary_name }}</strong></p>
+                <h4>Sathi:</h4>
+                <p><strong>{{ case_details.sathi_name }}</strong></p>
+                <h4>Amount Needed:</h4>
+                <p><strong>₹{{ case_details.target_amount }}</strong></p>
+                
+                <div class="d-flex">
+                    <a href="/fabpay/{{ case_details.name }}" class="btn btn-primary btn-lg" role="button">Click to Donate</a>
+                    <div class="share-dropdown ml-2">
+                      <button class="btn btn-secondary btn-lg"><i class="fas fa-share-alt"></i></button>
+                      <div class="share-dropdown-menu">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=I am raising funds for {{case_details.main_title}} Click here to know more: https://{{ site_name }}/fund/{{ case_details.name}}" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://api.whatsapp.com/send?text=I am raising funds for {{case_details.main_title}} Click here to know more: https://{{ site_name }}/fund/{{ case_details.name}}" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://twitter.com/intent/tweet?url=I am raising funds for {{case_details.main_title}} Click here to know more: https://{{ site_name }}/fund/{{ case_details.name}}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h4>About the Beneficiary</h4>
+          <p>
+            {{ case_details.case_details }}
+          </p>
+          <h4>About the volunteer</h4>
+          <p>
+            {{ case_details.sathi_details }}
+          </p>
+        </div>
+    </div>
+        <hr>
+    <h4 class="border-title border-left mar-t0">FAQs about Fund a Beneficiary</h3>
+
+        <div class="accordion accordion-group accordion-classic" id="construction-accordion">
+          <div class="card">
+            <div class="card-header p-0 bg-transparent" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  What is the Fund a Beneficiary Program?
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+              data-parent="#construction-accordion">
+              <div class="card-body">
+                The "Fund a Beneficiary" program by Sampark Sathi Foundation enables donors to directly support underprivileged individuals in need of specific products or services. 
+                Verified by our dedicated volunteers (Sathis), each beneficiary's case is documented and shared on social media to raise funds. 
+                Donors can connect directly with beneficiaries through the assigned Sathi, ensuring transparency and trust. This program leverages both college and corporate volunteers to manage cases of varying financial needs, ensuring efficient and compassionate assistance.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header p-0 bg-transparent" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How are cases verified?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
+              <div class="card-body">
+                We have a dedicated team to verify details of every beneficiary. Our case managers make sure the details are accurate.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header p-0 bg-transparent" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                  Who is a Sathi?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+              data-parent="#construction-accordion">
+              <div class="card-body">
+                At Sampark Sathi, our volunteers are called "Sathis," which means a friend who is there for you when you need them. A Sathi is more than just a helper; they are a trusted companion dedicated to supporting beneficiaries in every step of their journey
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header p-0 bg-transparent" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Is it safe to donate online?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+              data-parent="#construction-accordion">
+              <div class="card-body">
+                Yes. Our website follows all safety standards and we do not store any information beyond what is necessary.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <br>
+    
+</div>
 {% endblock %}
