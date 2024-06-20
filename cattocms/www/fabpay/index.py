@@ -1,5 +1,7 @@
 import frappe
 from frappe import _
+from frappe.utils import get_site_name
+
 def get_context(context):
     context.caseid = frappe._dict()
     context.no_cache = 1
@@ -10,3 +12,4 @@ def get_context(context):
         ["name","main_title", "target_amount"],
         as_dict=1,
 	)
+    context.site_name = get_site_name(frappe.local.request.host)

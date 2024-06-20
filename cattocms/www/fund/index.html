@@ -51,7 +51,7 @@
             color: #333;
             margin-top: 10px;
         }
-        .card button {
+        .card a {
             padding: 10px;
             border: none;
             width: 200px;
@@ -61,7 +61,7 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .card button:hover {
+        .card a:hover {
             background-color: #ebac0c;
         }
   .verified-badge {
@@ -109,7 +109,7 @@
 <section id="main-container" class="main-container">
   <div class="container">
     <h2 class="text-center">Fund a Beneficiary</h2>
-    <p style="text-align: center;">Verified, Authentic cases, Handled by our Volunteers.</p>
+    <p style="text-align: center;">Real Needs, Genuine Stories, Verified by dedicated volunteers.</p>
     <br>
     {{ CaseCard(caselist) }}
 
@@ -132,7 +132,7 @@
             <p class="card-title">{{ case.main_title }}</p>
             <p class="card-text">Verified by {{case.sathi_name}}, Sathi of the underprivileged.</p>
             <p class="card-amount">Amount: ₹{{ case.target_amount }} for {{case.raising_for}}</p>
-            <button href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</button>
+            <a href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</a>
         </div>
       </div>
     </div>
