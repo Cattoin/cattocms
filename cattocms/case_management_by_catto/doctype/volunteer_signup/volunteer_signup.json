@@ -1,54 +1,38 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:FABT-{#####}",
- "creation": "2024-06-18 20:01:09.078087",
+ "autoname": "format:VS-{####}",
+ "creation": "2024-06-20 21:45:08.615843",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "case_id",
-  "donated_amount",
-  "donor_name",
-  "donor_email",
-  "donor_phone"
+  "volunteer_name",
+  "volunteer_email",
+  "volunteer_phone"
  ],
  "fields": [
   {
-   "fieldname": "donated_amount",
-   "fieldtype": "Int",
-   "label": "Amount"
-  },
-  {
-   "fieldname": "donor_email",
+   "fieldname": "volunteer_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Donor Email",
-   "options": "Email"
+   "label": "Volunteer Name"
   },
   {
-   "fieldname": "donor_phone",
+   "fieldname": "volunteer_email",
    "fieldtype": "Data",
-   "label": "Donor Phone"
+   "label": "Volunteer Email"
   },
   {
-   "fieldname": "donor_name",
+   "fieldname": "volunteer_phone",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Donor Name"
-  },
-  {
-   "fieldname": "case_id",
-   "fieldtype": "Link",
-   "label": "Case",
-   "options": "Case"
+   "label": "Volunteer Phone"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 21:51:22.777495",
+ "modified": "2024-06-20 22:59:17.676365",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
- "name": "FAB Transaction",
+ "name": "Volunteer Signup",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

@@ -1,189 +1,130 @@
 {% extends 'templates/sampark_base.html' %}
 
 {% block content %}
+<head>
+  <style>
+    .team-member {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .team-member img {
+            width: 40%;
+            min-width: 100px;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .member-details {
+            flex: 1;
+        }
+        .member-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .member-desg {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .member-about {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .member-social {
+            align-items: center;
+        }
+        .member-social a {
+            margin-right: 10px;
+        }
+        .member-social a:last-child {
+            margin-right: 0;
+        }
+        .member-social a i {
+            font-size: 1.5em;
+            color: #0077b5;
+        }
+        .section {
+           text-align: center;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+  </style>
+</head>
 <body>
 <section id="main-container" class="main-container">
   <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-          <h3 class="column-title">Volunteer With Us</h3>
-          <p>At Sampark Sathi, our volunteers are called "Sathis," which means a friend who is there for you when you need them.</p>
-          <blockquote><p>A quote about volunteering</p></blockquote>
-          <p>A Sathi is more than just a helper; they are a trusted companion dedicated to supporting beneficiaries in every step of their journey.</p>
+    <div class="section">
+      <h2>Vision</h2>
+      <p>To make millions of individuals aware of and better able to access the resources offered by NGOs and governmental institutions.</p>
+  </div>
 
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          
-          <div id="page-slider" class="page-slider small-bg">
-
-              <div class="item" style="background-image:url(assets/cattocms/constra/images/slider-pages/image2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Guidance and Support</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(/assets/cattocms/constra/images/slider-pages/image12.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Assistance</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(assets/cattocms/constra/images/slider-pages/image26.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Advocacy</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->          
-        
-
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
-
+  <div class="section">
+      <h2>Who We Are</h2>
+      <p>Sampark Sathi Foundation is the only aggregator in India that connects people living in the underserved communities to NGOs/government institutions that can solve their problems across health, education, human rights, skill and livelihood, and government welfare schemes.</p>
+  </div>
   </div><!-- Container end -->
-</section><!-- Main container end -->
-
-
-<section id="ts-team" class="ts-team">
   <div class="container">
-    <div class="row text-center">
-        <div class="col-lg-12">
-          <h2 class="section-title">Quality Service</h2>
-          <h3 class="section-sub-title">Professional Team</h3>
-        </div>
-    </div><!--/ Title row end -->
+    <div class="section">
+      <h2>Our Team</h2>
+<br>
+        <div class="team-member">
+          <img src="assets/cattocms/constra/images/team/prem.png" alt="Person 1">
+          <div class="member-details">
+              <div class="member-name">Prem Ashra</div>
+              <div class="member-desg">Co-Founder & CEO</div>
+              <div class="member-social">
+                <a href="www.linkedin.com/in/prem-ashra-215439164" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Replace the href value with the actual LinkedIn profile link -->
+                <!-- Font Awesome icon for LinkedIn -->
+            </div>
+              <div class="member-about">
+                Prem Ashra, a dedicated social worker from Delhi School of Social Work, combines his knowledge of profession and power of passion to drive meaningful social change. During his time volunteering while earning his Master's in Social Work, he gained an in-depth understanding of various issues and firsthand experience of ground realities. He encountered numerous individuals facing significant challenges due to a lack of access to essential services. Although he was eager to assist, the organization he was with focused solely on education, which limited his ability to provide comprehensive support. This experience ignited his passion to address these gaps after graduation. With a solution-oriented mindset, he founded Sampark Sathi to bridge this divide and empower marginalized communities by connecting them with relevant NGOs. Prem views every issue through the lens of human rights and basic human dignity, regardless of a person's status in society. Consequently, he established a platform where people from all walks of life, whose voices often go unheard, can express their concerns not as a matter of charity, but as a matter of right. 
 
-    <div class="row">
-        <div class="col-lg-12">
-          <div id="team-slide" class="team-slide">
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team1.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Nats Stenman</h3>
-                      <p class="ts-designation">Chief Operating Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 1 end -->
+              </div>
+             
+          </div>
+      </div>
+      
+      <div class="team-member">
+          <img src="assets/cattocms/constra/images/team/Rohit.jpg" alt="Person 2">
+          <div class="member-details">
+              <div class="member-name">Rohit Ranjan</div>
+              <div class="member-desg">Co-Founder & COO</div>
+              <div class="member-social">
+                <a href="https://www.linkedin.com/in/rohit-ranjan-a17a39219" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Replace the href value with the actual LinkedIn profile link -->
+                <!-- Font Awesome icon for LinkedIn -->
+            </div>
+              <div class="member-about">
+                Rohit Ranjan, a postgrad of Indian Institute of Mass Communication and an alumnus of Ramjas College, has dedicated the past 3-4 years to active volunteerism, leveraging his skills to connect with socially marginalized communities. He is the co-founder of Sampark Sathi Foundation, which empowers underprivileged individuals to voice their concerns and connects them with solutions within the development sector.  His invaluable experience in engaging with the downtrodden has been instrumental in enabling Sampark Sathi Foundation to penetrate grassroots levels effectively. As a key figure within the NGO, he exemplifies core human and social work principles, such as empathy, compassion, and community empowerment, by tirelessly executing proposed plans to uplift the underprivileged and amplify their voices in society
+              </div>
+          </div>
+      </div>
+    
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team2.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Angela Lyouer</h3>
-                      <p class="ts-designation">Innovation Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 2 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team3.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Mark Conter</h3>
-                      <p class="ts-designation">Safety Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 3 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team4.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Ayesha Stewart</h3>
-                      <p class="ts-designation">Finance Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 4 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team5.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Dave Clarkte</h3>
-                      <p class="ts-designation">Civil Engineer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 5 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team6.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Elton Joe</h3>
-                      <p class="ts-designation">Site Supervisor</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 6 end -->
-
-          </div><!-- Team slide end -->
-        </div>
+    
     </div><!--/ Content row end -->
   </div><!--/ Container end -->
-</section><!--/ Team end -->
+</section><!-- Main container end -->
+
 
 </body>
 

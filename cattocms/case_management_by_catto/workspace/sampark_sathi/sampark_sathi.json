@@ -9,20 +9,20 @@
    "label": "Case Category"
   }
  ],
- "content": "[{\"id\":\"b3bty88Us3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sampark Sathi</span>\",\"col\":12}},{\"id\":\"igmU5BNA1Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Case Count\",\"col\":4}},{\"id\":\"aZfcEgArLQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"id\":\"B1wx7aAVgk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Tasks\",\"col\":3}},{\"id\":\"9Xe_59GPOC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Graph\",\"col\":6}},{\"id\":\"ugpM6iDbXd\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Category\",\"col\":6}}]",
+ "content": "[{\"id\":\"aZfcEgArLQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case List\",\"col\":3}},{\"id\":\"B1wx7aAVgk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Tasks\",\"col\":3}},{\"id\":\"fPzROXAYYl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payments\",\"col\":3}},{\"id\":\"9Xe_59GPOC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Graph\",\"col\":6}},{\"id\":\"ugpM6iDbXd\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Case Category\",\"col\":6}},{\"id\":\"igmU5BNA1Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Case Count\",\"col\":4}},{\"id\":\"jeXssDPU2l\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Cases\",\"col\":4}},{\"id\":\"Vp775BZDPl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Amount Raised\",\"col\":4}},{\"id\":\"p5uUc7Ii9w\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8XynFBpwRW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Volunteer Signups\",\"col\":3}},{\"id\":\"knZWNSEQBG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Volunteering Data\",\"col\":3}}]",
  "creation": "2024-06-01 10:03:13.771778",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "share",
+ "icon": "color-review-points",
  "idx": 0,
- "indicator_color": "green",
+ "indicator_color": "",
  "is_hidden": 0,
  "label": "Sampark Sathi",
  "links": [],
- "modified": "2024-06-19 15:17:33.209766",
+ "modified": "2024-06-20 22:57:26.914960",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Sampark Sathi",
@@ -30,6 +30,14 @@
   {
    "label": "Case Count",
    "number_card_name": "Case count"
+  },
+  {
+   "label": "Completed Cases",
+   "number_card_name": "Completed Cases"
+  },
+  {
+   "label": "Amount Raised",
+   "number_card_name": "Fund a Beneficiary"
   }
  ],
  "owner": "Administrator",
@@ -37,7 +45,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 23.0,
+ "sequence_id": 1.0,
  "shortcuts": [
   {
    "color": "Grey",
@@ -52,6 +60,30 @@
    "doc_view": "List",
    "label": "My Tasks",
    "link_to": "ToDo",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payments",
+   "link_to": "FAB Transaction",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Volunteer Signups",
+   "link_to": "Volunteer Signup",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Volunteering Data",
+   "link_to": "Volunteer Data",
    "stats_filter": "[]",
    "type": "DocType"
   }

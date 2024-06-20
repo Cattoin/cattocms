@@ -1,121 +1,75 @@
-@@include('header.htm')
-@@include('blocks/navigation-1.htm')
-@@include('blocks/page-header.htm', {"title": "Service", "prevpage": "Services", "currentpage": "All Services"})
+{% extends 'templates/sampark_base.html' %}
 
-<section id="main-container" class="main-container pb-2">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service1.jpg" alt="service-image">
+{% block content %}
+<head>
+    <title>Our Services</title>
+    <style>
+       
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .sub-section {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .sub-section p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+          <br>
+            <h2>We Provide Two-fold Services</h2>
+            <br>
+            <div class="sub-section">
+                <h4>For Beneficiaries</h4>
+                <p>
+                    We assist people who have needs across health, education, human rights, skill and livelihood, and government welfare schemes. Our platform connects individuals with NGOs, government institutions, or volunteers (Sathis) to resolve their problems effectively.
+                </p>
+                <p><strong>Cases that we have resolved in the past:</strong></p>
+                <ul>
+                    <li><strong>Healthcare:</strong> Eye cataract operation, Drug rehabilitation, Disability certificate, Heart hole, Tuberculosis (TB), Cancer treatment</li>
+                    <li><strong>Education:</strong> Career Counseling, Scholarship, mentoring, School enrolment, Books for the needy</li>
+                    <li><strong>Skills and Livelihood:</strong> NSDC sewing certificate, vocational skill training centers, entrepreneurship</li>
+                    <li><strong>Social Welfare and Rights:</strong> Domestic violence, Child rights, Assistive devices for Divyang, Old age shelter home, Wheelchair/Tricycle, stick, crutches</li>
+                    <li><strong>Identification and Documentation:</strong> Voter ID, ABHA card, ration card, disability certificate, widow pension</li>
+                </ul>
+                <p><em>Please Note: Sampark Sathi Foundation resolves cases across all genders and age-groups.</em></p>
+                <p>Don't hesitate to raise a concern if you are a beneficiary or someone who is raising a concern on behalf of a beneficiary. You will find a ‘raise a concern’ button on our home page.</p>
             </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Zero Harm Everyday</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
+            <br>
+            <div class="sub-section">
+                <h4>For NGOs/CSR Organisations or Government Institutions</h4>
+                <p>
+                    We collaborate with NGOs/CSR organisations or government institutions looking to serve beneficiaries in various thematic areas. Sampark Sathi Foundation offers assistance in community outreach, beneficiary verification, beneficiary stories collection, social media recognition, and last-mile beneficiary support.
+                </p>
+                <ul>
+                    <li>Community Outreach & Expansion</li>
+                    <li>Beneficiary Verification</li>
+                    <li>Beneficiary Stories</li>
+                    <li>Social Media Recognition</li>
+                    <li>Last-Mile Beneficiary Support</li>
+                </ul>
+                <p>We provide detailed beneficiary information tailored to your specific requirements, including their name, age, contact number, and location, along with photographs (with your banner) from the session.</p>
             </div>
-        </div><!-- Service1 end -->
-      </div><!-- Col 1 end -->
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service2.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Virtual Construction</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div><!-- Service2 end -->
-      </div><!-- Col 2 end -->
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service3.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Build To Last</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div><!-- Service3 end -->
-      </div><!-- Col 3 end -->
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service4.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">EXTERIOR DESIGN</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div><!-- Service1 end -->
-      </div><!-- Col 4 end -->
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service5.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">RENOVATION</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div><!-- Service2 end -->
-      </div><!-- Col 5 end -->
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service6.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">SAFETY MANAGEMENT</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div><!-- Service3 end -->
-      </div><!-- Col 6 end -->
-
-    </div><!-- Main row end -->
-  </div><!-- Conatiner end -->
-</section><!-- Main container end -->
-
-@@include('footer.htm')
+            <br>
+        </div>
+    </div>
+</body>
+{% endblock %}

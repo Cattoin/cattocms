@@ -33,6 +33,7 @@
   "sathi_name",
   "case_image",
   "target_amount",
+  "raising_for",
   "case_details",
   "sathi_details"
  ],
@@ -191,11 +192,16 @@
    "fieldname": "sathi_details",
    "fieldtype": "Small Text",
    "label": "Sathi Details"
+  },
+  {
+   "fieldname": "raising_for",
+   "fieldtype": "Data",
+   "label": "Raising for"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 10:46:10.922861",
+ "modified": "2024-06-20 21:44:13.402575",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Case",
@@ -211,6 +217,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sampark Admin",
    "share": 1,
    "write": 1
   }

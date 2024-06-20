@@ -136,6 +136,13 @@ a.read-more {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 767px) {
+            .header-right,
+            .top-bar {
+                display: none;
+            }
+        }
+
 a.read-more:hover {
   color: #222;
 }

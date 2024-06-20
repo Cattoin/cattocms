@@ -3,24 +3,67 @@
 {% block content %}
 
 <style>
-  .tile {
-      margin-bottom: 10px;
-      padding: 5px;
-  }
-  .tile img {
-      width: 100%;
-      height: 300px;
-      padding: 20px;
-      object-fit: cover;
-  }
-  .tile-body {
-      padding: 20px;
-      text-align: center;
-  }
-  .tile-title {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-  }
+  .card {
+            display: flex;
+            width: 100%;
+            height: calc((80vw - 16px) / 3); /* Ensures the height is 1/3rd of the width */
+            max-height: calc((800px - 16px) / 3); 
+            /* padding-bottom: 33.33%; /* 1/3 of the width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .card-content {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .card img {
+            width: 33.33%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .divider {
+            width: 4px;
+            background-color: #ffb600;
+        }
+        .card-details {
+            width: calc(66.66% - 4px);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .card-text {
+            font-size: 1em;
+            color: #555;
+        }
+        .card-amount {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+        }
+        .card button {
+            padding: 10px;
+            border: none;
+            width: 200px;
+            background-color: #ffb600;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .card button:hover {
+            background-color: #ebac0c;
+        }
   .verified-badge {
     position: absolute;
     top: 20px;
@@ -36,43 +79,39 @@
   .verified-badge i {
     margin-right: 5px;
   }
+  @media only screen and (min-width: 768px) {
+            .card {
+                display: flex;
+                flex-direction: row;
+                height: calc((80vw - 16px) / 3); /* Ensures the height is 1/3rd of the width */
+            }
+            .card img {
+                width: 33.33%;
+                height: 100%;
+            }
+            .card-details {
+                width: calc(66.66% - 4px);
+                padding: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .card {
+                width: 100%;
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+        }
 </style>
 
 <section id="main-container" class="main-container">
   <div class="container">
     <h2 class="text-center">Fund a Beneficiary</h2>
-    <div class="row">
-      <div class="col-12">
-        <div class="shuffle-btn-group">
-          <label class="active" for="all">
-            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-          </label>
-          <label for="commercial">
-            <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Health
-          </label>
-          <label for="education">
-            <input type="radio" name="shuffle-filter" id="education" value="education">Education
-          </label>
-          <label for="government">
-            <input type="radio" name="shuffle-filter" id="government" value="government">Skilling
-          </label>
-          <label for="infrastructure">
-            <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure">Human Rights
-          </label>
-          <label for="residential">
-            <input type="radio" name="shuffle-filter" id="residential" value="residential">Animal Care
-          </label>
-        </div><!-- project filter end -->
-
-        <div class="row shuffle-wrapper">
-          <div class="col-1 shuffle-sizer"></div>
-
-        {{ CaseCard(caselist) }}
-
-        </div><!-- shuffle end -->
-      </div>
-
-    </div><!-- Content row end -->
+    <p style="text-align: center;">Verified, Authentic cases, Handled by our Volunteers.</p>
+    <br>
+    {{ CaseCard(caselist) }}
 
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
@@ -82,19 +121,20 @@
 {% macro CaseCard(caselist) %}
 {% if caselist | length %}
 	{% for case in caselist %}
-  
-    <div class="col-lg-4 col-md-6 shuffle-item tile" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
-        <div class="card">
-            <img src="{{ case.case_image }}" class="card-img-top" alt="Beneficiary 1">
-            <div class="verified-badge">
-              <i class="fas fa-check-circle"></i> Verified
-            </div>
-            <div class="tile-body">
-                <h5 class="tile-title">{{ case.main_title }}</h5>
-                <h5><strong>₹{{ case.target_amount }}</strong></h5>
-                <a href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</a>
-            </div>
+    <div class="card">
+      <div class="verified-badge">
+        <i class="fas fa-check-circle"></i> Verified
+      </div>
+      <div class="card-content">
+        <img src="{{ case.case_image }}" alt="Initiative Photo">
+        <div class="divider"></div>
+        <div class="card-details">
+            <p class="card-title">{{ case.main_title }}</p>
+            <p class="card-text">Verified by {{case.sathi_name}}, Sathi of the underprivileged.</p>
+            <p class="card-amount">Amount: ₹{{ case.target_amount }} for {{case.raising_for}}</p>
+            <button href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</button>
         </div>
+      </div>
     </div>
 	{% endfor %}
 {% else %}
