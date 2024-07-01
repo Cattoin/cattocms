@@ -4,6 +4,15 @@
 
 {% extends 'templates/sampark_base.html' %}
 {% block content %}
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  
+</head>
 
 <section id="main-container" class="main-container">
   <div class="container">
@@ -24,7 +33,7 @@
           </span>
           <div class="ts-service-box-content">
             <h4>Visit Our Office</h4>
-            <p>9051 Constra Incorporate, USA</p>
+            <p>108/14, Onkar Nagar B, Tri Nagar, New Delhi, 110035</p>
           </div>
         </div>
       </div><!-- Col 1 end -->
@@ -36,7 +45,7 @@
           </span>
           <div class="ts-service-box-content">
             <h4>Email Us</h4>
-            <p>office@Constra.com</p>
+            <p>prem@samparksathi.org <br> rohit@samparksathi.org</p>
           </div>
         </div>
       </div><!-- Col 2 end -->
@@ -48,26 +57,17 @@
           </span>
           <div class="ts-service-box-content">
             <h4>Call Us</h4>
-            <p>(+9) 847-291-4353</p>
+            <p>704 207 6492 <br> 931 364 6615</p>
           </div>
         </div>
       </div><!-- Col 3 end -->
 
-    </div><!-- 1st row end 
-
-    <div class="gap-60"></div>
-
-    <div class="google-map">
-      <div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
     </div>
--->
     <div class="gap-40"></div>
 
     <div class="row">
       <div class="col-md-12">
         <h3 class="column-title">We love to hear</h3>
-        <!-- contact form works with formspree.io  -->
-        <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
         <form id="contact-form" action="#" method="post" role="form">
           <div class="error-container"></div>
           <div class="row">
@@ -101,8 +101,21 @@
           </div>
         </form>
       </div>
-
+      <h2 class="h3">Our Office Location</h2>
+        <div id="map"  style="width: 960px; height: 500px"></div>
+        <script>
+          var map = L.map('map').setView([28.6755726, 77.1583399], 14);
+  
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+          }).addTo(map);
+  
+          L.marker([28.6755726, 77.1583399]).addTo(map)
+              .bindPopup('Sampark Sathi Office')
+              .openPopup();
+      </script>
     </div><!-- Content row -->
+    
   </div><!-- Conatiner end -->
 </section><!-- Main container end   @@include('footer.htm') -->
 {% endblock %}
