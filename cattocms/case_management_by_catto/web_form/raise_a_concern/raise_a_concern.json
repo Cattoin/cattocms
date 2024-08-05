@@ -22,7 +22,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-06-19 15:22:22.420796",
+ "modified": "2024-08-01 22:50:12.494622",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "raise-a-concern",
@@ -74,7 +74,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -169,7 +169,7 @@
    "options": "Male\nFemale\nOther",
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -197,7 +197,7 @@
    "options": "Health\nEducation\nHuman Rights\nSkill and Vocational training\nLivelihood and Employment\nWomen's Rights\nChild Rights\nElderly Rights\nDisability Rights\nElderly Care\nShelter Home\nMental Health\nHuman Trafficking\nAnimal Care\nHealth camp\nSelf Help Group\nOthers",
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
