@@ -53,7 +53,7 @@
                 <p><strong>₹{{ case_details.target_amount }}</strong></p>
                 
                 <div class="d-flex">
-                    <a href="/fabpay/{{ case_details.name }}" class="btn btn-primary btn-lg" role="button">Click to Donate</a>
+                    <a href="/confirm-details/new?case_id={{ case_details.name }}&donated_amount={{case_details.target_amount}}&donation_for={{case_details.main_title}}" class="btn btn-primary btn-lg" role="button">Donate Now</a>
                     <div class="share-dropdown ml-2">
                       <button class="btn btn-secondary btn-lg"><i class="fas fa-share-alt"></i></button>
                       <div class="share-dropdown-menu">

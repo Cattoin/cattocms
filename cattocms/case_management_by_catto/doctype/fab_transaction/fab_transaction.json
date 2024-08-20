@@ -7,10 +7,13 @@
  "engine": "InnoDB",
  "field_order": [
   "case_id",
+  "donation_for",
   "donated_amount",
   "donor_name",
   "donor_email",
-  "donor_phone"
+  "donor_phone",
+  "pan_card",
+  "payment_status"
  ],
  "fields": [
   {
@@ -41,11 +44,29 @@
    "fieldtype": "Link",
    "label": "Case",
    "options": "Case"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "Initiated\nPending\nCompleted"
+  },
+  {
+   "fetch_from": "case_id.main_title",
+   "fieldname": "donation_for",
+   "fieldtype": "Data",
+   "label": "Donation for"
+  },
+  {
+   "fieldname": "pan_card",
+   "fieldtype": "Data",
+   "label": "PAN Card"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 21:51:22.777495",
+ "modified": "2024-08-20 22:43:34.301503",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "FAB Transaction",

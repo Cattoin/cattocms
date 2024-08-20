@@ -1,0 +1,61 @@
+{% extends "cattocms/templates/sampark_base.html" %}
+
+{% block content %}
+
+<style>
+    .container1 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    h1 {
+        color: #000000;
+    }
+    p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .button:hover {
+        background-color: #45a049;
+    }
+    .countdown {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #333;
+    }
+</style>
+<script>
+    let countdown = 5; // Countdown time in seconds
+    function startCountdown() {
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdownElement.textContent = `Redirecting in ${countdown} seconds...`;
+            countdown--;
+            if (countdown < 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html'; // Redirect to home page
+            }
+        }, 1000);
+    }
+    window.onload = startCountdown; // Start countdown on page load
+</script>
+
+<body>
+<div class="container1">
+    <h1>Donation Successful!</h1>
+    <p>Thank you for donating. Your payment has been processed successfully.</p>
+    <p>You will receive a confirmation email shortly.</p>
+    <div class="countdown" id="countdown">Redirecting in 5 seconds...</div>
+    <a href="index.html" class="button">Return to Home</a>
+</div>
+</body>
+{% endblock %}
