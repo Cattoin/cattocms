@@ -19,6 +19,7 @@
   "status",
   "column_break_nxto",
   "case_description",
+  "requirement",
   "section_break_nmad",
   "case_updates",
   "case_expenses",
@@ -174,7 +175,8 @@
   },
   {
    "fieldname": "section_break_nmad",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Tracking"
   },
   {
    "fieldname": "benef_address",
@@ -207,6 +209,7 @@
    "default": "Not Started",
    "fieldname": "fundraising_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Fundraising Status",
    "options": "Not Started\nOngoing\nCompleted"
   },
@@ -221,11 +224,16 @@
   {
    "fieldname": "section_break_wrnj",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requirement",
+   "fieldtype": "Data",
+   "label": "Requirement"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-20 21:13:06.329435",
+ "modified": "2024-09-17 16:17:47.169580",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Case",
