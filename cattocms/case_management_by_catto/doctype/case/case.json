@@ -205,12 +205,12 @@
    "label": "Raised Amount"
   },
   {
-   "default": "Not Started",
+   "default": "Not FAB",
    "fieldname": "fundraising_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Fundraising Status",
-   "options": "Not Started\nOngoing\nCompleted"
+   "options": "Not FAB\nNot Started\nOngoing\nCompleted"
   },
   {
    "fieldname": "section_break_mzir",
@@ -232,7 +232,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-24 17:28:12.395635",
+ "modified": "2024-09-29 18:08:23.795029",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Case",
