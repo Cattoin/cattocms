@@ -13,6 +13,7 @@
   "donor_email",
   "donor_phone",
   "pan_card",
+  "address",
   "payment_status"
  ],
  "fields": [
@@ -62,11 +63,16 @@
    "fieldname": "pan_card",
    "fieldtype": "Data",
    "label": "PAN Card"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-20 22:43:34.301503",
+ "modified": "2024-09-30 22:22:45.724374",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "FAB Transaction",
