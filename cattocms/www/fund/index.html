@@ -60,7 +60,7 @@
     margin: 10px 0;
 }
 
-.card a {
+.fundbtn {
     padding: 10px 15px;
     background-color: #ffb600;
     color: white;
@@ -72,7 +72,7 @@
     box-sizing: border-box;
 }
 
-.card a:hover {
+.fundbtn {
     background-color: #ebac0c;
 }
 
@@ -131,7 +131,7 @@
         justify-content: space-between;
     }
 
-    .card a {
+    .fundbtn {
         width: 200px;
     }
 }
@@ -160,13 +160,14 @@
         <i class="fas fa-check-circle"></i> Verified
       </div>
       <div class="card-content">
-        <img src="{{ case.case_image }}" alt="Initiative Photo">
+        <img src="{{ case.case_image }}" alt="Beneficiary Photo">
         <div class="divider"></div>
         <div class="card-details">
-            <p class="card-title">{{ case.main_title }}</p>
+            <p class="card-title"><a href="/fund/{{ case.name }}">{{ case.main_title }}</a></p>
             <p class="card-text">Verified by {{case.sathi_name}}, Sathi of the underprivileged.</p>
-            <p class="card-amount">Amount: ₹{{ case.target_amount }} for {{case.raising_for}}</p>
-            <a href="/fund/{{ case.name }}" class="btn btn-primary">Fund Now</a>
+            <p class="card-amount">Amount: ₹{{ case.target_amount }}</p>
+            <p>{{case.raising_for}}</p>
+            <a href="/fund/{{ case.name }}" class="fundbtn btn btn-primary">Fund Now</a>
         </div>
       </div>
     </div>
