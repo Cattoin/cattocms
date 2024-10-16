@@ -122,7 +122,8 @@
    "description": "In rupees",
    "fieldname": "target_amount",
    "fieldtype": "Int",
-   "label": "Target Amount"
+   "label": "Target Amount",
+   "non_negative": 1
   },
   {
    "fieldname": "case_files",
@@ -203,7 +204,8 @@
    "description": "Will be updated automatically",
    "fieldname": "raised_amount",
    "fieldtype": "Int",
-   "label": "Raised Amount"
+   "label": "Raised Amount",
+   "non_negative": 1
   },
   {
    "default": "Not FAB",
@@ -234,7 +236,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-29 20:07:31.942107",
+ "modified": "2024-10-16 23:16:51.040904",
  "modified_by": "Administrator",
  "module": "Case Management by Catto",
  "name": "Case",

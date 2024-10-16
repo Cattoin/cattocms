@@ -51,9 +51,11 @@
                 <p><strong>{{ case_details.sathi_name }}</strong></p>
                 <h4>Amount Needed:</h4>
                 <p><strong>₹{{ case_details.target_amount }}</strong></p>
+                <h5>Raised so far:</h5>
+                <p><strong>₹{{ case_details.raised_amount }}</strong></p>
                 
                 <div class="d-flex">
-                    <a href="/confirm-details/new?case_id={{ case_details.name }}&donated_amount={{case_details.target_amount}}&donation_for={{case_details.main_title}}" class="btn btn-primary btn-lg" role="button">Donate Now</a>
+                    <a href="/confirm-details/new?case_id={{ case_details.name }}&donation_for={{case_details.main_title}}" class="btn btn-primary btn-lg" role="button">Donate Now</a>
                     <div class="share-dropdown ml-2">
                       <button class="btn btn-secondary btn-lg"><i class="fas fa-share-alt"></i></button>
                       <div class="share-dropdown-menu">
